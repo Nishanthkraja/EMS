@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: springboot-docker
+    env: docker
+    region: oregon
+    plan: free
+    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    envVars:
+      - key: PORT
+        value: 8080
